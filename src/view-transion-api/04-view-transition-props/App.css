@@ -1,0 +1,31 @@
+::view-transition-old(.page-update) {
+  animation: fade-out 2s ease forwards;
+}
+
+::view-transition-new(.page-update) {
+  animation: fade-in 2s ease forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
