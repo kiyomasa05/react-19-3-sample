@@ -1,0 +1,70 @@
+main {
+  padding: 40px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.content,
+.loading {
+  width: 360px;
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid #ccc;
+}
+
+.loading {
+  color: #666;
+}
+
+.label {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #888;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+}
+
+::view-transition-old(.suspense-reveal),
+::view-transition-new(.suspense-reveal) {
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+::view-transition-old(.suspense-reveal) {
+  animation-name: fade-out-left;
+}
+
+::view-transition-new(.suspense-reveal) {
+  animation-name: fade-in-right;
+}
+
+@keyframes fade-out-left {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-40px) scale(0.96);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}

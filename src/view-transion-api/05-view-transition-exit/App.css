@@ -1,0 +1,31 @@
+::view-transition-new(.card-enter) {
+  animation: slide-in 1s ease;
+}
+
+::view-transition-old(.card-exit) {
+  animation: slide-out 1s ease;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

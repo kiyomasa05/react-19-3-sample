@@ -1,0 +1,31 @@
+main {
+  padding: 40px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  font-size: 20px;
+}
+
+.thumbnail {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.hero-image {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+}
+
+::view-transition-group(product-image) {
+  animation-duration: 1s;
+}
